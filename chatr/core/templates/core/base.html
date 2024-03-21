@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css">
+
+        <title>{% block title %}{% endblock %}CHATR</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            body, h1 {font-family: "Playfair Display", serif};
+        </style>
+
+        <style>
+            body {font-family: "Jost", serif;}
+            .chat-messages {
+                height: 400px;
+                overflow-y: auto;
+            }
+            .bgimg {
+                background-image: url('https://images.unsplash.com/photo-1618172193622-ae2d025f4032?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2864&q=80');
+                /* min-height: 120%; 
+                background-position: center;
+                background-size: cover;
+                height:135%;
+                width:100%;
+                display:block;
+                margin:auto; */
+            }
+             .extra_info {
+                position:relative;
+                left:900px;
+                bottom:-75px;
+                height:30px;
+                width:100%;
+            }
+            .description {
+                position: relative;
+                left:25px;
+                bottom:15px;
+                height:30px;
+                width:100%;
+                color: rgb(62, 8, 112);
+            }
+            .description_next {
+                position: relative;
+                left:130px;
+                bottom:15px;
+                height:30px;
+                width:100%;
+                color: rgb(62, 8, 112);
+            }
+        </style>
+    </head>
+
+
+    <body class="bgimg bg-center bg-no-repeat bg-auto font-bold bg-[length:2100px_1700px]">
+        <nav class="flex items-center justify-between px-4 py-6 font-bold navMenu">
+            <div>
+                <a href="/" class="text-xl text-white "><button>ChatR</button></a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-indigo-500 hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-indigo-400 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800" type="button"> Menu <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    {% if request.user.is_authenticated  %}
+                    <li>
+                        <a href="/rooms/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rooms</a>
+                    </li>
+                    <li>
+                        <a href="/logout/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log out</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="/login/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log in</a>
+                    </li>
+                    <li>
+                        <a href="/signup/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign up</a>
+                    </li>
+                    {% endif %}
+                    </ul>
+                </div>
+
+                  <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+                
+          </div>
+          
+
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+
+        {% block scripts %}
+        {% endblock %}
+    </body>
+
+
+</html>
+
