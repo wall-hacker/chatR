@@ -1,9 +1,9 @@
 ### Team members: Bianca Popa, Adriana Dobrica, Mirza Ana-Maria, Andrei Mihail Calin
 
-# ChatR - Chat Website 
+# ChatR - Real Time Chat Website
 
 ## Description
-Chatr, as the name implies, is a real time chat website that allows users to communicate in selected rooms. Having several rooms, users can enjoy the experience of chatting with friends and family, and even other users, on a chosen topic. Want to organize an event? Like maybe a picnic? Or movie night? Choose the event room and discuss the organizing details: invite list, menu, location... or maybe.. you want to meet new people sharing your hobbies. One only has to go on the desired room and chat with users all around the world. The Chatr site allows users to register/login to an account, join any of the chat rooms available, and send messages. Also, the site ensures that messages are stored immediately and can be viewed right away. While the user has the ability to scroll on a conversation, the chat also scrolls on its own to the last message received. The admin of the app, or superuser, manages the rooms available and the list of users. He can delete users, create/delete rooms, and change permissions.
+ChatR, as the name implies, is a real time chat website that allows users to communicate in selected rooms. Having several rooms, users can enjoy the experience of chatting with friends and family, and even other users, on a chosen topic. Want to organize an event? Like maybe a picnic? Or movie night? Choose the event room and discuss the organizing details: invite list, menu, location... or maybe.. you want to meet new people sharing your hobbies. One only has to go on the desired room and chat with users all around the world. The ChatR site allows users to register/login to an account, join any of the chat rooms available, and send messages. Also, the site ensures that messages are stored immediately and can be viewed right away. While the user has the ability to scroll on a conversation, the chat also scrolls on its own to the last message received. The admin of the app, or superuser, manages the rooms available and the list of users. He can delete users, create/delete rooms, and change permissions.
 
 ## Technologies Used
 
@@ -46,7 +46,7 @@ To start the server run the following commands:
 $ django-admin startproject chatr
 ```
 
-Add the Chatr folder to the created environment and then run:
+Add the ChatR folder to the created environment and then run:
 
 ```
 $ python3 manage.py runserver
